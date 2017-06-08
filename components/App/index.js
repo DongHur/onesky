@@ -17,7 +17,12 @@ export default class App extends Component {
                 longitude: -122.4324,
                 latitudeDelta: 0.0922,
                 longitudeDelta: 0.0421,
-            }        
+            },
+            pinLoc:{
+                latitude: 37.78825,
+                longitude: -122.4324,
+            },
+            image: require('../../assets/mountain.jpg')        
         }
     }
     render() {
@@ -32,7 +37,13 @@ export default class App extends Component {
                 latitudeDelta: 0.0922,
                 longitudeDelta: 0.0421,
             }}
-            />
+            >
+              <MapView.Marker draggable
+                coordinate={this.state.pinLoc}
+                image={this.state.image}
+                onDragEnd={(e) => this.setState({pinLoc: e.nativeEvent.coordinate})}
+              />
+            </MapView>
           </View>          
         );
     }
