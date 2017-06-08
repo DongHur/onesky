@@ -1,0 +1,12 @@
+{
+    "name": "onesky",
+    "description": "onesky",
+    "slug": "rn-devello",
+    "privacy": "public",
+    "sdkVersion": "17.0.0",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "ios": {
+        "supportsTablet": true
+    }
+}
